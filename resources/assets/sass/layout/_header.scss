@@ -2,14 +2,9 @@ $topbar-height: 90px;
 $topbar-link-spaceBetweenThem: 10px;
 $topbar-logo-spaceToLinks: 10px;
 
-.sponsors {
-  background-color: #1c2855;
-  height: 200px;
-  
-}
-
-.site-section {
-  margin-top: 20px;
+.header {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .topbar {
@@ -34,44 +29,44 @@ $topbar-logo-spaceToLinks: 10px;
 }
 
 .topbar-link {
+  position: relative;
   display: block;
   height: 90px;
-  line-height: 90px;
   padding-right: $topbar-link-spaceBetweenThem /2;
   padding-left: $topbar-link-spaceBetweenThem /2;
   font-size: 1.2rem;
+  line-height: 90px;
   text-transform: uppercase;
-  position: relative;
 }
 
 .topbar-link::before {
-  content: '';
   position: absolute;
-  height: 2px;
-  background-color: #3FC1C9;
-  left: 0;
   right: 0;
   bottom: 27px;
+  left: 0;
+  height: 2px;
+  content: '';
+  background-color: #3fc1c9;
+  transition: transform .3s;
   transform: scaleX(0);
-  transition: transform 0.3s;
 }
 
 .topbar-link:hover::before {
-    transform: scaleX(1);
-  }
+  transform: scaleX(1);
+}
 
 .topbar--action {
-  border: 2px solid;
-  border-color: #3FC1C9;
   height: 50px;
-  line-height: 50px;
-  margin-left: 15px;
-  padding-left: 10px;
   padding-right: 10px;
+  padding-left: 10px;
+  margin-left: 15px;
+  line-height: 50px;
+  border: 2px solid;
+  border-color: #2072a7;
 }
 
 .topbar--signin {
-  border-color: #01d2b3;
+  border-color: #2072a7;
 }
 
 .topbar--left {

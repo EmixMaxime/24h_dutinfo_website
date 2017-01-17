@@ -5,12 +5,27 @@
   <title>Les 24h</title>
   <!-- <link rel="stylesheet" href="css/index.css"> -->
   <!-- <link rel="stylesheet" href="css/main.css"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
 </head>
 <body>
+  {% include '../../svg/symbol-defs.twig' %}
   {% include './header.twig' %}
+
+<div class="l-section l-section-dark">
+  <div class="banner row">
+    {% block banner %}
+
+    {% endblock banner %}
+  </div>
+
+</div>
+
 
   {% block content %}
   {% endblock %}
+
+  {% include "./footer.twig" %}
+
   {#<div class="navigation-wrapper" id="navigation">
     <nav class="menu">
       <ul>

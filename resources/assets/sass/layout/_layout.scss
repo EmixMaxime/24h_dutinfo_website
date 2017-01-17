@@ -2,74 +2,46 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
 
 @import "./_header.scss";
+@import "../_variables.scss";
 
 *, *::after, *::before {
   box-sizing: border-box;
 }
 
 body {
-  color: #fff;
   // background: #192242;
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  color: #fff;
   background-color: mediumvioletred; // TODO: à enlever pour la prod
 }
 
 h1 {
   margin: .2em 0;
+  font-size: 3rem;
   //font-family: 'Raleway', sans-serif;
   font-weight: 400;
-  font-size: 3rem;
   line-height: 1;
 }
 
-/** SITE DIVIDER **/
 
-.l-section-divider--up {
+.l-section {
+  padding-top: 50px;
   padding-bottom: 50px;
-  clip-path: polygon(0 100%, 0 0, 100% 0, 100% 50%)
+}
+
+.l-space-top {
+  padding-top: 30px;
 }
 
 .l-section-light {
-  background-color:#1c2855;
+  background-color: $background-light;
 }
 
 .l-section-dark {
-  background-color: #192242;
+  background-color: $background-dark;
 }
 
-.l-section-divider--down {
-  padding-bottom: 150px;
-  // background-color: #1c2855;
-  clip-path: polygon(0% 70%, 0% 0%, 100% 0%, 100% 100%);
-}
-
-.l-divider-dark {
-  background-color: #192242;
-}
-
-.l-divider-light {
-  background-color: #1c2855;
-}
-
-/** paragraph divider **/
-
-.paragraph-divider {
-  display: inline-block;
-  position: relative;
-}
-
-.paragraph-divider::after {
-  content: '';
-  background-color: #01d2b3;
-  height: 1px;
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  right: 0;
-}
-
-/** Général **/
 
 .section {
   padding-top: 35px;
@@ -85,48 +57,24 @@ h1 {
 
 /** FOOTER **/
 
-.l-footer {
-  height: 300px;
+@import "./_footer.scss";
+
+/** paragraph divider **/
+
+$paragraph-divider-space: 15px; // L'espace entre le texte et la barre
+
+.l-paragraph-divider {
+  position: relative;
+  display: inline-block;
+  margin-bottom: $paragraph-divider-space;
 }
 
-.l-footer-block {
-  @include grid-column(4);
-}
-
-.l-footer-block-title {
-  font-size: 2rem;
-}
-
-.row {
-  @include grid-row();
-}
-
-
-/**
-COUNTDOWN
- */
-
-.countdown-wrapper {
-  @include grid-column(3);
-}
-
-.countdown-box {
-  background-color: rgba(0,0,0,0.1);
-  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.16), 0 0px 6px rgba(0, 0, 0, 0.23);
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-.countdown-box-time {
-  display: block;
-  font-size: 3rem;
-  text-align: center;
-  font-weight: 100;
-}
-
-.countdown-box-desc {
-  display: block;
-  text-align: center;
-  font-size: 1.6em;
-  font-weight: 300;
+.l-paragraph-divider::after {
+  position: absolute;
+  right: 0;
+  bottom: -$paragraph-divider-space;
+  left: 0;
+  height: 1px;
+  content: '';
+  background-color: $divider-color;
 }

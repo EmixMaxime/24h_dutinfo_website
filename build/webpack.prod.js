@@ -25,10 +25,10 @@ webpack_base.plugins.push(
 )
 
 // VueJS extract
-let vuePlugin = webpack_base.plugins[0].options.options.vue 
-vuePlugin.loaders.scss = ExtractCSSPlugin.extract({ 
-  loader: ['css-loader', 'postcss-loader', 'sass-loader']
-}) 
+// let vuePlugin = webpack_base.plugins[0].options.options.vue 
+// vuePlugin.loaders.scss = ExtractCSSPlugin.extract({ 
+//   loader: ['css-loader', 'postcss-loader', 'sass-loader']
+// }) 
 
 // Extract SCSS / CSS
 // On supprime tous les "loader" pour le css/scss pour mettre seulement le extractPlugin ;)

@@ -1,0 +1,33 @@
+{% extends './layout/layout.twig' %}
+
+{% block banner %}
+  <section class="header-text">
+    <h1 class="header-title">Les 24h des dut informatique</h1>
+    <p class="header-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet a aliquid aut eum mollitia, molestias sit officiis quam, fugit iure nostrum fugiat suscipit assumenda id voluptas corporis. Sed, molestias, quo.</p>
+    <p class="header-description l-space-top l-paragraph-divider">C'est le temps de s'incrire!</p>
+  </section>
+{% endblock banner %}
+
+{% block content %}
+
+  {% import "./macro/form.twig" as form %}
+
+  <div class="l-section l-section-light">
+    <div class="row inscription">
+      <section class="inscription-box inscription-form">
+        <h2>Formulaire d'inscription</h2>
+        <form action="#" method="POST">
+
+          <div class="form-group-2">
+            {{ form.field('text', 'Prénom', null, 'first_name', 'first_name') }}
+            {{ form.field('text', 'Nom', null, 'last_name', 'last_name') }}
+          </div>
+
+        </form>
+      </section>
+      <section class="inscription-box inscription-informations">
+
+      </section>
+    </div>
+  </div>
+{% endblock content %}

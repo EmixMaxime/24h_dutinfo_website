@@ -1,31 +1,54 @@
 {% extends './layout/layout.twig' %}
 
+{% block banner %}
+
+<div class="row animated-come-top">
+  <section class="header-text">
+    <h1 class="strong-title header-title">Les 24h des dut informatique</h1>
+    <p class="header-description">Les 24h des IUT informatiques regroupe, chaque année, des étudiants de tout les IUT de France afin qu'ils concourent durant des epreuves testant leurs talents de programmeurs</p>
+    <p class="header-description l-space-top l-paragraph-divider">Soyez prêts</p>
+  </section>
+</div>
+
+<div class="countdown l-space-top row">
+  <div class="countdown-wrapper">
+    <div class="countdown-box" id="countdown-months">
+      <span class="countdown-box-time">1</span>
+      <span class="countdown-box-desc">mois</span>
+    </div>
+  </div>
+
+  <div class="countdown-wrapper">
+    <div class="countdown-box" id="countdown-days">
+      <span class="countdown-box-time">5</span>
+      <span class="countdown-box-desc">jours</span>
+    </div>
+  </div>
+
+  <div class="countdown-wrapper">
+    <div class="countdown-box" id="countdown-hours">
+      <span class="countdown-box-time">5</span>
+      <span class="countdown-box-desc">heures</span>
+    </div>
+  </div>
+
+  <div class="countdown-wrapper">
+    <div class="countdown-box" id="countdown-minutes">
+      <span class="countdown-box-time">25</span>
+      <span class="countdown-box-desc">minutes</span>
+    </div>
+  </div>
+
+</div>
+
+
+{% endblock banner %}
+
+
 {% block content %}
-  <section class="sponsors l-section">
+  <section class="l-section l-section-light sponsors">
     <div class="l-title">
-      <h1 class="strong-title sponsors-title paragraph-divider">Les sponsors</h1>
+      <h1 class="strong-title sponsors-title paragraph-divider">Nos partenaires</h1>
     </div>
   </section>
-
-  <footer class="l-footer l-section-dark">
-    <div class="row section">
-      <div class="l-footer-block">
-        <div class="l-title">
-          <p class="l-footer-block-title paragraph-divider">Rester connecté</p>
-        </div>
-        <form method="POST" action="#">
-          <div class="field field-animated">
-            <label for="email" class="field-label">Inscrivez-vous à notre newsletters</label>
-            <input type="email" name="email" id="email" class="field-input">
-          </div>
-        </form>
-      </div>
-      <div class="l-footer-block">
-
-      </div>
-      <div class="l-footer-block">
-
-      </div>
-    </div>
-  </footer>
 {% endblock content %}

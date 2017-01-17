@@ -1,0 +1,6 @@
+{% macro field (type, label, value, id, name) %}
+  <div class="field field-animated">
+    <label for="{{ id }}" class="field-label">{{ label }}</label>
+    <input type="{{ type }}" name="first_name" id="{{ id }}" class="field-input" value="{{ value }}">
+  </div>
+{% endmacro %}

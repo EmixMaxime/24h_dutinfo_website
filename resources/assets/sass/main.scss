@@ -1,2 +1,16 @@
 @import "./layout/_reset.scss";
 @import "./layout/_layout.scss";
+
+/** https://icomoon.io **/
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.row {
+  @include grid-row();
+}

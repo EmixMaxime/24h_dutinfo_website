@@ -1,0 +1,24 @@
+.countdown-wrapper {
+  @include grid-column(3);
+}
+
+.countdown-box {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: rgba(0,0,0,.1);
+  box-shadow: 0 0 0 rgba(0, 0, 0, .16), 0 0 6px rgba(0, 0, 0, .23);
+}
+
+.countdown-box-time {
+  display: block;
+  font-size: 3rem;
+  font-weight: 100;
+  text-align: center;
+}
+
+.countdown-box-desc {
+  display: block;
+  font-size: 1.6em;
+  font-weight: 300;
+  text-align: center;
+}

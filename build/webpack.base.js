@@ -99,6 +99,13 @@ if (config.html) {
       inject: true // true | 'body' | 'head' | false -> true | body -> inclus les js en fin du body
     })
   )
+  webpack_base.plugins.push(
+    new HtmlWebpackPlugin({ // What is this ??
+      filename: 'inscription.html',
+      template: 'resources/views/inscription.twig',
+      inject: true // true | 'body' | 'head' | false -> true | body -> inclus les js en fin du body
+    })
+  )
 }
 
 module.exports = webpack_base

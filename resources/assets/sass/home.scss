@@ -1,5 +1,6 @@
 @import "main.scss";
 @import "../libs/bower_components/foundation-sites/scss/foundation";
+@import "./_countdown.scss";
 // @include foundation-global-styles
 
 @import url('https://fonts.googleapis.com/css?family=Raleway');
@@ -11,8 +12,8 @@
 }
 
 .header-description {
-  font-size: 2em;
   display: inline-block;
+  font-size: 2em;
 }
 
 /*
@@ -20,90 +21,15 @@ ANIMATION À L'ENTRÉE
  */
 
 .animated-come-top {
+  transition: transform .3s;
   transform: translateY(-15px);
-  transition: transform 0.3s;
 }
 
 .animated-come-bottom {
+  transition: transform .3s;
   transform: translateY(15px);
-  transition: transform 0.3s;
 }
 
 .showed {
   transform: translateY(0);
 }
-
-/*
-FIN
- */
-
-$bullet-around-size: 18px;
-$bullet-inside-size: 8px;
-
-@include breakpoint(small) {
-  .navigation-wrapper {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin-bottom: 30px;
-
-    @include grid-row;
-
-  }
-}
-
-  .menu-link {
-    position: relative;
-    display: inline-block;
-    height: 50px;
-    &::before {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      width: $bullet-around-size;
-      height: $bullet-around-size;
-      content: '';
-      border: 1px solid #fff;
-      border-radius: 50%;
-      opacity: .5;
-      transform: translateX(-50%);
-    }
-    &::after {
-      position: absolute;
-      bottom: ($bullet-around-size - $bullet-inside-size) /2;        // 14 - 8 = 6 = en haut du rond, /3 = au centre
-      left: 50%;
-      width: $bullet-inside-size;
-      height: $bullet-inside-size;
-      content: '';
-      background-color: #fff;
-      border-radius: 50%;
-      transform: translateX(-50%);
-    }
-    
-  }
-
-
-  .menu-list {
-    position: relative;
-    display: inline-block;
-    text-align: center;
-
-    @include grid-column(1 of 5);
-
-    &::before, &::after {
-      position: absolute;
-      bottom: $bullet-around-size /2;      // au centre des cercles
-      width: 100px;
-      height: 1px;
-      content: '';
-      background: #fff;
-    }
-
-    &::before {
-      left: 0;
-    }
-    &::after {
-      right: 0;
-    }
-  }

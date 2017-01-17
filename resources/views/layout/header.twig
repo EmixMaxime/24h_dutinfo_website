@@ -1,73 +1,19 @@
-<div class="l-divider-dark">
-  <div class="l-section-divider--up l-section-light">
-    <header class="header row">
-      <nav class="topbar">
-        <ul class="topbar-menu topbar--left">
-          <li class="topbar-li"><a href="#" class="topbar-link">Accueil</a></li>
-          <li class="topbar-li"><a href="#" class="topbar-link">Epreuves</a></li>
-          <li class="topbar-li"><a href="#" class="topbar-link">Participants</a></li>
-          <li class="topbar-li"><a href="#" class="topbar-link">Planning</a></li>
-        </ul>
-        <div class="topbar-logo">
-          <img src="logosite.png" alt="">
-        </div>
-        <ul class="topbar-menu topbar--right">
-          <li class="topbar-li"><a class="topbar-link topbar--action topbar--travel" href="">Préparer ses 24h</a></li>
-          <li class="topbar-li"><a class="topbar-link topbar--action topbar--signin" href="">Inscription</a></li>
-        </ul>
-      </nav>
-    </header>
-  </div>
-</div>
-
-{# divider-light ne sert qu'à mettre la couleur souhaité #}
-<div class="l-divider-light"> 
-  <div class="l-section-divider--down l-section-dark">
-    <div class="banner">
-      {% block banner %}
-        <div class="row animated-come-top">
-          <section class="header-text section">
-            <h1 class="strong-title header-title">Les 24h des dut informatique</h1>
-            <p class="header-description paragraph-divider">Soyez prêts</p>
-          </section>
-        </div>
-
-      <div class="row section animated-come-bottom">
-        <div class="countdown-wrapper">
-          <div class="countdown-box" id="countdown-months">
-            <span class="countdown-box-time">1</span>
-            <span class="countdown-box-desc">mois</span>
-          </div>
-        </div>
-        <div class="countdown-wrapper">
-          <div class="countdown-box" id="countdown-days">
-            <span class="countdown-box-time">5</span>
-            <span class="countdown-box-desc">jours</span>
-          </div>
-        </div>
-        <div class="countdown-wrapper">
-          <div class="countdown-box" id="countdown-hours">
-            <span class="countdown-box-time">5</span>
-            <span class="countdown-box-desc">heures</span>
-          </div>
-        </div>
-        <div class="countdown-wrapper">
-          <div class="countdown-box" id="countdown-minutes">
-            <span class="countdown-box-time">25</span>
-            <span class="countdown-box-desc">minutes</span>
-          </div>
-        </div>
-        </div>
+<div class="l-section-light">
+  <header class="header">
+    <nav class="topbar">
+      <ul class="topbar-menu topbar--left">
+        <li class="topbar-li"><a href="#" class="topbar-link">Accueil</a></li>
+        <li class="topbar-li"><a href="#" class="topbar-link">Epreuves</a></li>
+        <li class="topbar-li"><a href="#" class="topbar-link">Participants</a></li>
+        <li class="topbar-li"><a href="#" class="topbar-link">Planning</a></li>
+      </ul>
+      <div class="topbar-logo">
+        <img src="logosite.png" alt="">
       </div>
-
-          <section class="header-social">
-          </section>
-        </div>
-      {% endblock banner %}
-    </div>
-
-  </div>
-
+      <ul class="topbar-menu topbar--right">
+        <li class="topbar-li"><a class="topbar-link topbar--action topbar--travel" href="">Préparer ses 24h</a></li>
+        <li class="topbar-li"><a class="topbar-link topbar--action topbar--signin" href="">Inscription</a></li>
+      </ul>
+    </nav>
+  </header>
 </div>
-
-</header>

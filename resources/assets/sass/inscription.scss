@@ -1,0 +1,6 @@
+@import "main.scss";
+@import "../libs/bower_components/foundation-sites/scss/foundation";
+
+.form-group-2 > div {
+  @include grid-column(6);
+}

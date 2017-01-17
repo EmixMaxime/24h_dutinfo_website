@@ -18,6 +18,7 @@ let server = new WebpackDevServer(compiler, { // compiler = instance de webpack 
   historyApiFallback: config.historyApiFallback,
   quiet: false,
   noInfo: false,
+  host: '192.168.1.30',
   publicPath: webpack_dev.output.publicPath, // Dossier où se trouvent nos != assets
   stats: {
     colors: true,
@@ -25,7 +26,7 @@ let server = new WebpackDevServer(compiler, { // compiler = instance de webpack 
   }
 })
 server.use(hotMiddleware)
-server.listen(config.port, function (err) {
+server.listen(config.port, /* '192.168.1.30', */ function (err) {
   if (err) {
     console.log(err)
     return
