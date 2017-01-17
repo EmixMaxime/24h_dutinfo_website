@@ -1,0 +1,6 @@
+/.idea
+/node_modules
+/public
+npm-debug.log
+/docs
+/resources/assets/libs

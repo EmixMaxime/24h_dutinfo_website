@@ -1,0 +1,143 @@
+@import "../../libs/bower_components/foundation-sites/scss/foundation";
+
+// @import "../../sass/_variables";
+
+// input:-webkit-autofill {
+//   -webkit-box-shadow: 0 0 0 1000px $header_bgc inset;
+// }
+
+form {
+  textarea {
+    width: 100%;
+    height: auto!important;
+    padding: 8px!important;
+    margin-top: 10px;
+    font-family: inherit;
+    resize: none;
+    border: none;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+
+$color : #fff;
+$field-label-color: #fff;
+$fill-color: #fff;
+$focused-field-label-color: #3FC1C9;
+$focused-fill-color: #3FC1C9;
+
+@mixin field ($focusedClass, $fill-color, $focused-fill-color) {
+  height: 72px;
+  position: relative; // pour pouvoir mettre des positions absolutes à l'intérieur
+  padding: 16px 0 8px 0;
+  &::before, &::after {
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    content: '';
+    background-color: $fill-color;
+  }
+  &::after {
+    background-color: $focused-fill-color;
+    transition-duration: 0.3s;
+    transition-property: transform;
+    transform: scaleX(0);
+  }
+  &.#{$focusedClass}::after {
+    transform: scaleX(1);
+  }
+}
+
+@mixin fieldInput () {
+  display: block;
+  width: 100%;
+  height: 32px;
+  position: relative; // pour pouvoir cliquer sur l'input malgré le label
+  -webkit-appearance: none; // Sur IOS mise en place de shadow, on enlève grâce à ça.
+  padding: 8px 0;
+  line-height: 16px;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  outline: none;// pour enlever le survole bleu des navigateurs
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin fieldLabel ($focusedClass, $labeledClass, $color, $focusedColor) {
+  display: block;
+  position: relative; // pour pouvoir cliquer sur l'input malgré le label ! mettre label avant input
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  color: $color;
+  transition-duration: 0.3s;
+  transition-property: transform, color;
+  transform: translateY(24px) scale(1); // au début, le label est dans l'input (effet de placeholder)
+  transform-origin: 0 50%;
+  .#{$labeledClass} & {
+    transform: translateY(0);
+  }
+  .#{$focusedClass} & {
+    color: $focusedColor;
+    transform: scale(0.8);
+  }
+}
+
+@mixin animatedButton ($backgroundColor) {
+  position: relative;
+  z-index: 1;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  background-color: $backgroundColor;
+  border: none;
+  transition: 0.3s color;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  &::before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    content: '';
+    background-color: darken($backgroundColor, 10%);
+    opacity: 0;
+    transition: transform 0.4s, opacity 0.4s;
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    transform: scaleX(0.5);
+  }
+  &:hover::before {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+.field {
+  @include field('is-focused', $fill-color, $focused-fill-color);
+}
+
+.field-input {
+  @include fieldInput();
+}
+.field-label {
+  @include fieldLabel('is-focused', 'has-label', $field-label-color, $focused-field-label-color);
+}
+
+.field-submit {
+  width: 150px;
+  margin-top: 10px;
+
+  @include animatedButton(red);
+  // @include animatedButton($blue);
+}
+
+.field-textarea {
+  height: auto;
+}

@@ -1,0 +1,84 @@
+$topbar-height: 90px;
+$topbar-link-spaceBetweenThem: 10px;
+$topbar-logo-spaceToLinks: 10px;
+
+.sponsors {
+  background-color: #1c2855;
+  height: 200px;
+  
+}
+
+.site-section {
+  margin-top: 20px;
+}
+
+.topbar {
+  width: 920px;
+  height: $topbar-height;
+  margin: 0 auto;
+}
+
+.topbar-li {
+  float: left; // Si je met display inline-block il reste un petit espace entre chaque li (non souhaité ici)
+  // line-height: $topbar-height;
+}
+
+.topbar-logo {
+  float: left;
+  padding-right: $topbar-logo-spaceToLinks;
+  padding-left: $topbar-logo-spaceToLinks;
+  line-height: $topbar-height;
+  img {
+    width: 80px; // logo width
+  }
+}
+
+.topbar-link {
+  display: block;
+  height: 90px;
+  line-height: 90px;
+  padding-right: $topbar-link-spaceBetweenThem /2;
+  padding-left: $topbar-link-spaceBetweenThem /2;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.topbar-link::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  background-color: #3FC1C9;
+  left: 0;
+  right: 0;
+  bottom: 27px;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.topbar-link:hover::before {
+    transform: scaleX(1);
+  }
+
+.topbar--action {
+  border: 2px solid;
+  border-color: #3FC1C9;
+  height: 50px;
+  line-height: 50px;
+  margin-left: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.topbar--signin {
+  border-color: #01d2b3;
+}
+
+.topbar--left {
+  float: left;
+}
+
+.topbar--right {
+  float: left;
+  margin-top: 20px; // Hack css pour centrer verticalement
+}
