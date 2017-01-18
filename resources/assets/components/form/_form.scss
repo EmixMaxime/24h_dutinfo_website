@@ -1,4 +1,5 @@
 @import "../../libs/bower_components/foundation-sites/scss/foundation";
+$select-background: #1c2855;
 
 // @import "../../sass/_variables";
 
@@ -20,7 +21,6 @@ form {
     }
   }
 }
-
 
 $color : #fff;
 $field-label-color: #fff;
@@ -140,4 +140,13 @@ $focused-fill-color: #3FC1C9;
 
 .field-textarea {
   height: auto;
+}
+
+.field-select {
+  border: none;
+  background-color: $select-background; // TODO: l'idéal ça serait d'avoir transparent pour qui prenne la couleur du bbackground d'où il est
+}
+
+select:focus {
+  outline: none;
 }
