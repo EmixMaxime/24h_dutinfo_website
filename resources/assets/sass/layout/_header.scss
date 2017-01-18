@@ -1,3 +1,4 @@
+@import "../variables.scss";
 $topbar-height: 90px;
 $topbar-link-spaceBetweenThem: 10px;
 $topbar-logo-spaceToLinks: 10px;
@@ -66,7 +67,7 @@ $topbar-logo-spaceToLinks: 10px;
 }
 
 .topbar--signin {
-  border-color: #2072a7;
+  border-color: $blue-light;
 }
 
 .topbar--left {
