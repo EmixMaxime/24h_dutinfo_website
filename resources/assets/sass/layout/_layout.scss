@@ -19,11 +19,17 @@ body {
 h1 {
   margin: .2em 0;
   font-size: 3rem;
-  //font-family: 'Raleway', sans-serif;
   font-weight: 400;
   line-height: 1;
 }
 
+.l-section-title {
+  text-align: center;
+}
+
+.l-title {
+  // color: red;
+}
 
 .l-section {
   padding-top: 50px;
@@ -42,12 +48,7 @@ h1 {
   background-color: $background-dark;
 }
 
-
-.section {
-  padding-top: 35px;
-}
-
-.l-section {
+.l-sub-section {
   padding-top: 35px;
 }
 
