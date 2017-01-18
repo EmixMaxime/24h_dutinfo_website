@@ -11,22 +11,36 @@
 {% block content %}
 
   {% import "./macro/form.twig" as form %}
+  {% import "./macro/title.twig" as title %}
 
   <div class="l-section l-section-light">
-    <div class="row inscription">
-      <section class="inscription-box inscription-form">
-        <h2>Formulaire d'inscription</h2>
-        <form action="#" method="POST">
+    <div class="row inscription-wrapper">
 
-          <div class="form-group-2">
+      <section class="inscription-section inscription-form">
+        {{ title.sectiontitle("Formulaire d'inscription") }}
+        <form action="#" method="POST" class="row">
+
+          <div class="form-group-2 row">
             {{ form.field('text', 'Prénom', null, 'first_name', 'first_name') }}
             {{ form.field('text', 'Nom', null, 'last_name', 'last_name') }}
           </div>
 
+          {{ form.field('email', 'Email', null, 'email', 'email') }}
+
+          <div class="field field-animated">
+            <label for="iut" class="field-label">Votre IUT</label>
+            <select id="iut" name="select" class="field-input field-select">
+              <option value="valeur1">Valeur 1</option>
+              <option value="valeur2" selected>Valeur 2</option>
+              <option value="valeur3">Valeur 3</option>
+            </select>
+          </div>
+
         </form>
       </section>
-      <section class="inscription-box inscription-informations">
 
+      <section class="inscription-section inscription-informations">
+        {{ title.sectiontitle("Informations") }}
       </section>
     </div>
   </div>

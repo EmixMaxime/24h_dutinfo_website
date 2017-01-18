@@ -1,5 +1,21 @@
-@import "main.scss";
+// @import "main.scss";
 @import "../libs/bower_components/foundation-sites/scss/foundation";
+
+.inscription-section {
+  // @include grid-column(12);
+}
+
+// @media print, screen and (min-width: medium) {
+//   .inscription-section {
+//     @include grid-column(6);
+//   }
+// }
+
+@include breakpoint(medium) {
+    .inscription-section {
+    @include grid-column(6);
+  }
+}
 
 .form-group-2 > div {
   @include grid-column(6);
