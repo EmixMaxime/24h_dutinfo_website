@@ -1,3 +1,4 @@
+require('./google-motion.sass')
 import { trackStateOfElement, enterMotion, leaveMotion } from './Motion'
 
 if (!window.Emix) window.Emix = {}

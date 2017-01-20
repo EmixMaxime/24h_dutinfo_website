@@ -1,0 +1,17 @@
+@import "../libs/bower_components/foundation-sites/scss/foundation";
+
+.planning-hours {
+  font-size: 1.5em;
+}
+
+.planning-box {
+  text-align: center;
+}
+
+.planning-wrapper {
+  margin-top: 20px;
+  @include grid-column(12);
+  @include breakpoint(medium) {
+    @include grid-column-size(6);
+  }
+}

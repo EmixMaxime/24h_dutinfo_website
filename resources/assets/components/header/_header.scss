@@ -1,0 +1,167 @@
+@import "../../libs/bower_components/foundation-sites/scss/foundation";
+
+@import "../../sass/variables";
+$topbar-height: 90px;
+$topbar-link-spaceBetweenThem: 20px;
+$topbar-logo-spaceToLinks: 10px;
+
+$topbar-link-height-responsive: 50px;
+
+.banner-hero {
+  @include grid-column(12);
+}
+
+.header {
+  height: 120px; // 90 + 30+30
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.topbar-logo {
+  position: absolute;
+  top: 10px;
+  img {
+    width: 80px; // logo width
+  }
+}
+
+.topbar-nav {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  background-color: #2072a7;
+  transform: translateY(100%); // hidden by default
+}
+
+.topbar-nav.visible {
+  transform: translateY(0);
+}
+
+.topbar-li {
+  text-align: center;
+  border-bottom: 1px solid darken(#2072a7, 10%);
+}
+
+.topbar-link {
+  position: relative;
+  display: block;
+  height: $topbar-link-height-responsive;
+  padding-right: $topbar-link-spaceBetweenThem /2;
+  padding-left: $topbar-link-spaceBetweenThem /2;
+  font-size: 1.2rem;
+  line-height: $topbar-link-height-responsive;
+  text-transform: uppercase;
+}
+
+.topbar-trigger.visible {
+  transform: translateY(-280px);
+}
+.topbar-trigger {
+  position: fixed;
+  bottom: 55px;
+  left: 15px;
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  background-color: #2072a7;
+  border-radius: 100%;
+  outline: 0;
+  transform: translateY(0);
+  &::after {
+    position: absolute;
+    top: 8px;
+    left: 17px;
+    display: block;
+    width: 18px;
+    content: '';
+    box-shadow: 0 10px 0 1px, 0 16px 0 1px, 0 22px 0 1px;
+  }
+}
+
+.header {
+  @include grid-column(12);
+  @include grid-column-position(center);
+
+  @media print, screen and (min-width: 1450px) {
+      @include grid-column-size(8);
+  }
+}
+
+@media print, screen and (min-width: 950px) {
+  .topbar-trigger {
+    display: none;
+  }
+
+  .topbar--right {
+    float: right;
+  }
+
+  .topbar--left {
+    float: left;
+  }
+
+  .topbar-logo {
+    position: inherit;
+    float: left;
+    padding-right: 20px;
+  }
+
+  .topbar {
+    height: $topbar-height;
+    margin: 0 auto;
+  }
+
+  .topbar-li {
+    float: left;
+    border-bottom: none;
+  }
+
+  .topbar-nav {
+    position: static;
+    height: $topbar-height;
+    line-height: $topbar-height;
+    background-color: transparent;
+    transform: translateY(0);
+  }
+
+  .topbar-link--animated::before {
+    position: absolute;
+    right: 0;
+    bottom: 27px;
+    left: 0;
+    height: 2px;
+    content: '';
+    background-color: #3fc1c9;
+    transition: transform .3s;
+    transform: scaleX(0);
+  }
+
+  .topbar-link:hover::before {
+    transform: scaleX(1);
+  }
+
+  .topbar-link {
+    position: relative;
+    display: block;
+    height: 90px;
+    padding-right: $topbar-link-spaceBetweenThem /2;
+    padding-left: $topbar-link-spaceBetweenThem /2;
+    font-size: 1.2rem;
+    line-height: 90px;
+    text-transform: uppercase;
+  }
+  // !! cette règle doit être derrière .topbar-link
+  .topbar--action {
+    height: 50px;
+    margin-top: 18px; // TODO: hack css pour centrer verticalement
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-left: 15px;
+    line-height: 50px;
+    border: 2px solid #2072a7;
+  }
+
+}

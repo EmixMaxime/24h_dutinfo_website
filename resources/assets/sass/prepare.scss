@@ -1,0 +1,42 @@
+@import "../libs/bower_components/foundation-sites/scss/foundation";
+
+#map, .map-wrapper {
+  height: 600px;
+}
+
+#map {
+  @include grid-column(12);
+}
+
+.map-wrapper {
+  position: relative;
+}
+
+.prepare-wrapper {
+  @include grid-column(8);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.prepare-box {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgba(25,34,66,0.8);
+}
+
+.prepare-map-section {
+  @include grid-column(12);
+  @include breakpoint(medium) {
+    @include grid-column-size(6);
+  }
+}
+
+.prepare-list {
+  padding-left: 40px;
+}
+
+.prepare-item {
+  list-style: initial;
+}

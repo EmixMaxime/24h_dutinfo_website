@@ -12,16 +12,20 @@ document.addEventListener('DOMContentLoaded', function (e) {
 */
 
 import '../components/form/form'
+import '../components/header/header'
+import '../components/google-motion/google-motion'
+import '../components/countdown/countdown'
+
+console.log('form, header, google-motion, countdown inclu par main.js')
 
 const comeTop = document.querySelectorAll('.animated-come-top')
-console.log({comeTop})
 const comeBottom = document.querySelectorAll('.animated-come-bottom')
 
 window.addEventListener('load', () => { // Document ou windows ? http://stackoverflow.com/questions/588040/window-onload-vs-document-onload
-  console.log('load!!!')
-  comeTop.forEach(ct => ct.classList.add('showed'))
-  comeBottom.forEach(ct => ct.classList.add('showed'))
+  setTimeout(function () {
+    comeTop.forEach(ct => ct.classList.add('showed'))
+    comeBottom.forEach(ct => ct.classList.add('showed'))
+  }, 1000)
 
 })
 
-console.log('Hello from main.js')

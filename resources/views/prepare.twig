@@ -1,0 +1,85 @@
+{% extends './layout/layout.twig' %}
+
+{% block banner %}
+    <div class="l-section-title">
+        <h1>Comment préparer ses 24h ?</h1>
+        <p class="l-p">Pour faciliter votre séjour, voici des informations concernant les différents hôtels localisés à proximité de l'IUT, ainsi que sur les moyens de transport à emprunter.</p>
+        <p class="l-sub-title l-space-top l-paragraph-divider">Une question ? Contactez-nous</p>
+
+    </div>
+{% endblock banner %}
+
+{% block content %}
+    <div class="l-section-light map-wrapper">
+        <div id="map"></div>
+        <div class="prepare-wrapper">
+                <section class="howtocome prepare-map-section">
+                    <div class="prepare-box">
+                        <div class="l-section-title">
+                            <h2>Comment venir ?</h2>
+                            <p class="l-p">Nous nous situons Rue Louis David, Calais</p>
+                        </div>
+                        <ul class="prepare-list">
+                            <li class="prepare-item">
+                                <a href="http://www.sitac-calais-opale-bus.fr/">En bus</a>
+                            </li>
+                            <li class="prepare-item">
+                                <a href="http://www.voyages-sncf.com/">
+                                    En train
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="howtosleep prepare-map-section">
+                    <div class="prepare-box">
+                        <div class="l-section-title">
+                            <h2>Les hébergements</h2>
+                            <p class="l-p">Plusieurs hôtels à votre disposition</p>
+                        </div>
+                        <ul class="prepare-list">
+                            <li class="prepare-item">Hotel Ibis</li>
+                            <li class="prepare-item">Hotel Campanile</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+      // When the window has finished loading create our google map below
+      function initMap() {
+        // Basic options for a simple Google Map
+        // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+        var mapOptions = {
+          // How zoomed in you want the map to start at (always required)
+          zoom: 11,
+
+          // The latitude and longitude to center the map (always required)
+          center: new google.maps.LatLng(40.6700, -73.9400), // New York
+
+          // How you would like to style the map.
+          // This is where you would paste any style found on Snazzy Maps.
+          styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#193341"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#2c5a71"}]},{"featureType":"road","elementType":"geometry","stylers":[{"color":"#29768a"},{"lightness":-37}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#406d80"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#406d80"}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#3e606f"},{"weight":2},{"gamma":0.84}]},{"elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"weight":0.6},{"color":"#1a3541"}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#2c5a71"}]}]
+        };
+
+        // Get the HTML DOM element that will contain your map
+        // We are using a div with id="map" seen below in the <body>
+        var mapElement = document.getElementById('map');
+
+        // Create the Google Map using our element and options defined above
+        var map = new google.maps.Map(mapElement, mapOptions);
+
+        // Let's also add a marker while we're at it
+        var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(40.6700, -73.9400),
+          map: map,
+          title: 'Snazzy!'
+        });
+      }
+    </script>
+    <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2-_8jR-f2r_GwZE_SyhagQr2r2C715fw&callback=initMap">
+    </script>
+{% endblock %}

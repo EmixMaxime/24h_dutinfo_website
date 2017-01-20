@@ -1,0 +1,54 @@
+{% extends './layout/layout.twig' %}
+
+{% block banner %}
+    <div class="l-section-title">
+        <h1>Le planning</h1>
+        <p class="l-p">24h de programmation pour vous permettre de relever tous les défis de cette compétition dans les meilleurs conditions possible</p>
+        <p class="l-sub-title l-space-top l-paragraph-divider">Tiendrez-vous jusqu'au bout ?</p>
+
+    </div>
+{% endblock banner %}
+
+{% block content %}
+    <section class="l-section l-section-light planning">
+        <div class="row">
+            <div class="l-section-title">
+                {#<h1 class="l-title sponsors-title paragraph-divider">Déroulement du concours</h1>#}
+                <h1 class="l-title sponsors-title paragraph-divider">Vendredi 19 mai 2017</h1>
+            </div>
+            <div class="row">
+                <div class="planning-wrapper">
+                    <div class="planning-box l-box">
+                        <p class="planning-hours">14h</p>
+                        <p class="planning-desc">Début de la partie développement web</p>
+                    </div>
+                </div>
+                <div class="planning-wrapper">
+                    <div class="planning-box l-box">
+                        <p class="planning-hours">22h</p>
+                        <p class="planning-desc">Début de la partie développement d'application</p>
+                    </div>
+                </div>
+            </div>
+            <div class="l-section-title">
+                {#<h1 class="l-title sponsors-title paragraph-divider">Déroulement du concours</h1>#}
+                <h1 class="l-title sponsors-title paragraph-divider">Vendredi 20 mai 2017</h1>
+            </div>
+
+            <div class="row">
+                <div class="planning-wrapper">
+                    <div class="planning-box l-box">
+                        <p class="planning-hours">6h</p>
+                        <p class="planning-desc">Début de l'épreuve de sécurité</p>
+                    </div>
+                </div>
+                <div class="planning-wrapper">
+                    <div class="planning-box l-box">
+                        <p class="planning-hours">15h</p>
+                        <p class="planning-desc">Annonce des résultats</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

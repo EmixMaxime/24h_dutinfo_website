@@ -6,7 +6,7 @@
   <!-- <link rel="stylesheet" href="css/index.css"> -->
   <!-- <link rel="stylesheet" href="css/main.css"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
-<link href="./app.22ac4f6b.css" rel="stylesheet"><link href="./home.8c487188.css" rel="stylesheet"></head>
+<link href="./app.22ac4f6b.css" rel="stylesheet"><link href="./prepare.d466314d.css" rel="stylesheet"></head>
 <body>
   <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>
@@ -56,58 +56,89 @@ c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
 
 <div class="l-section l-section-dark">
   <section class="banner row">
-    
-<div class="row">
-  <div class="banner-hero">
-    <div class="l-section-title">
-      <h1>Les 24h des DUT informatique</h1>
-      <p class="l-p">Les 24h des IUT informatiques regroupent, chaque année, des étudiants de tous les IUT de France afin qu'ils concourent durant des épreuves testant leurs talents de programmeurs</p>
-      <p class="l-sub-title l-space-top l-paragraph-divider" id="countdown-end--time">Soyez prêts</p>
-    </div>
-  </div>
-</div>
+        <div class="l-section-title">
+        <h1>Comment préparer ses 24h ?</h1>
+        <p class="l-p">Pour faciliter votre séjour, voici des informations concernant les différents hôtels localisés à proximité de l'IUT, ainsi que sur les moyens de transport à emprunter.</p>
+        <p class="l-sub-title l-space-top l-paragraph-divider">Une question ? Contactez-nous</p>
 
-<div class="countdown l-space-top row">
-    <div class="countdown-wrapper">
-        <div class="countdown-box">
-            <span class="countdown-box-time" id="countdown-days">45</span>
-            <span class="countdown-box-desc">jours</span>
-        </div>
-    </div>
-
-    <div class="countdown-wrapper">
-        <div class="countdown-box">
-            <span class="countdown-box-time" id="countdown-hours">5</span>
-            <span class="countdown-box-desc">heures</span>
-        </div>
-    </div>
-
-    <div class="countdown-wrapper">
-        <div class="countdown-box">
-            <span class="countdown-box-time" id="countdown-minutes">25</span>
-            <span class="countdown-box-desc">minutes</span>
-        </div>
-    </div>
-
-    <div class="countdown-wrapper">
-        <div class="countdown-box">
-            <span class="countdown-box-time"  id="countdown-seconds">25</span>
-            <span class="countdown-box-desc">secondes</span>
-        </div>
-    </div>
-
-</div>
-
-  </section>
-
-</div>
-
-
-    <section class="l-section l-section-light sponsors">
-    <div class="l-section-title">
-      <h1 class="l-title sponsors-title paragraph-divider">Nos partenaires</h1>
     </div>
   </section>
+
+</div>
+
+
+      <div class="l-section-light map-wrapper">
+        <div id="map"></div>
+        <div class="prepare-wrapper">
+                <section class="howtocome prepare-map-section">
+                    <div class="prepare-box">
+                        <div class="l-section-title">
+                            <h2>Comment venir ?</h2>
+                            <p class="l-p">Nous nous situons Rue Louis David, Calais</p>
+                        </div>
+                        <ul class="prepare-list">
+                            <li class="prepare-item">
+                                <a href="http://www.sitac-calais-opale-bus.fr/">En bus</a>
+                            </li>
+                            <li class="prepare-item">
+                                <a href="http://www.voyages-sncf.com/">
+                                    En train
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="howtosleep prepare-map-section">
+                    <div class="prepare-box">
+                        <div class="l-section-title">
+                            <h2>Les hébergements</h2>
+                            <p class="l-p">Plusieurs hôtels à votre disposition</p>
+                        </div>
+                        <ul class="prepare-list">
+                            <li class="prepare-item">Hotel Ibis</li>
+                            <li class="prepare-item">Hotel Campanile</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+      // When the window has finished loading create our google map below
+      function initMap() {
+        // Basic options for a simple Google Map
+        // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+        var mapOptions = {
+          // How zoomed in you want the map to start at (always required)
+          zoom: 11,
+
+          // The latitude and longitude to center the map (always required)
+          center: new google.maps.LatLng(40.6700, -73.9400), // New York
+
+          // How you would like to style the map.
+          // This is where you would paste any style found on Snazzy Maps.
+          styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#193341"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#2c5a71"}]},{"featureType":"road","elementType":"geometry","stylers":[{"color":"#29768a"},{"lightness":-37}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#406d80"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#406d80"}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#3e606f"},{"weight":2},{"gamma":0.84}]},{"elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"weight":0.6},{"color":"#1a3541"}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#2c5a71"}]}]
+        };
+
+        // Get the HTML DOM element that will contain your map
+        // We are using a div with id="map" seen below in the <body>
+        var mapElement = document.getElementById('map');
+
+        // Create the Google Map using our element and options defined above
+        var map = new google.maps.Map(mapElement, mapOptions);
+
+        // Let's also add a marker while we're at it
+        var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(40.6700, -73.9400),
+          map: map,
+          title: 'Snazzy!'
+        });
+      }
+    </script>
+    <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2-_8jR-f2r_GwZE_SyhagQr2r2C715fw&callback=initMap">
+    </script>
 
   <footer class="l-section l-section--footer l-section-dark">
     <div class="l-footer row">
@@ -178,5 +209,5 @@ c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
       </div>
     </div>
 </footer>
-<script type="text/javascript" src="./app.b642a538.js"></script><script type="text/javascript" src="./home.4014e3c0.js"></script></body>
+<script type="text/javascript" src="./app.b642a538.js"></script><script type="text/javascript" src="./prepare.faa84d6c.js"></script></body>
 </html>

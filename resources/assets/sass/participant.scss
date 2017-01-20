@@ -1,0 +1,35 @@
+@import "../libs/bower_components/foundation-sites/scss/foundation";
+
+.participant-wrapper {
+  margin-top: 20px;
+  @include grid-column(12);
+  @include breakpoint(medium) {
+    @include grid-column-size(3);
+  }
+}
+
+.participant-search {
+  @include grid-column(12);
+  @include breakpoint(medium) {
+    @include grid-column-size(6);
+    @include grid-column-position(center);
+  }
+}
+
+.participant-box {
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.16), 0 0 6px rgba(0, 0, 0, 0.23);
+  font-size: 2rem;
+  padding: 15px;
+}
+
+
+.participant-box-title {
+  font-size: 1em;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.participant-box-list {
+  font-size: 0.6em;
+}

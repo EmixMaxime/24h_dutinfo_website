@@ -96,6 +96,7 @@ if (config.html) {
     new HtmlWebpackPlugin({ // What is this ??
       filename: 'index.html',
       template: 'resources/views/index.twig',
+      chunks: ['app', 'home'],
       inject: true // true | 'body' | 'head' | false -> true | body -> inclus les js en fin du body
     })
   )
@@ -103,7 +104,40 @@ if (config.html) {
     new HtmlWebpackPlugin({ // What is this ??
       filename: 'inscription.html',
       template: 'resources/views/inscription.twig',
-      inject: true // true | 'body' | 'head' | false -> true | body -> inclus les js en fin du body
+      chunks: ['app', 'inscription'],
+      // inject: true // true | 'body' | 'head' | false -> true | body -> inclus les js en fin du body
+    })
+  )
+  webpack_base.plugins.push(
+    new HtmlWebpackPlugin({ // What is this ??
+      filename: 'prepare.html',
+      template: 'resources/views/prepare.twig',
+      chunks: ['app', 'prepare'],
+      // inject: true // true | 'body' | 'head' | false -> true | body -> inclus les js en fin du body
+    })
+  )
+  webpack_base.plugins.push(
+    new HtmlWebpackPlugin({ // What is this ??
+      filename: 'participant.html',
+      template: 'resources/views/participant.twig',
+      chunks: ['app', 'participant'],
+      // inject: true // true | 'body' | 'head' | false -> true | body -> inclus les js en fin du body
+    })
+  )
+  webpack_base.plugins.push(
+    new HtmlWebpackPlugin({ // What is this ??
+      filename: 'epreuve.html',
+      template: 'resources/views/epreuve.twig',
+      chunks: ['app', 'epreuve'],
+      // inject: true // true | 'body' | 'head' | false -> true | body -> inclus les js en fin du body
+    })
+  )
+  webpack_base.plugins.push(
+    new HtmlWebpackPlugin({ // What is this ??
+      filename: 'planning.html',
+      template: 'resources/views/planning.twig',
+      chunks: ['app', 'planning'],
+      // inject: true // true | 'body' | 'head' | false -> true | body -> inclus les js en fin du body
     })
   )
 }

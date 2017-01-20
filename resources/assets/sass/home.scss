@@ -1,9 +1,5 @@
-@import "main.scss";
+// @import "main.scss";
 @import "../libs/bower_components/foundation-sites/scss/foundation";
-@import "./_countdown.scss";
-// @include foundation-global-styles
-
-@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 .header-text {
   text-align: center;
@@ -20,16 +16,33 @@
 ANIMATION À L'ENTRÉE
  */
 
-.animated-come-top {
-  transition: transform .3s;
-  transform: translateY(-15px);
-}
-
-.animated-come-bottom {
-  transition: transform .3s;
-  transform: translateY(15px);
-}
-
-.showed {
-  transform: translateY(0);
-}
+//$animation-y: 25px;
+//
+//.animate-show {
+//  opacity: 0;
+//}
+//
+//.animated-come-top {
+//  position: relative;
+//  top: -$animation-y;
+//  transform: translateY(0);
+//  transition: opacity .3s, transform .3s;
+//}
+//
+//.animated-come-bottom {
+//  position: relative;
+//  top: $animation-y;
+//  transition: opacity .3s, transform .3s;
+//  transform: translateY(0);
+//}
+//
+//.showed {
+//  opacity: 1;
+//}
+//
+//.animated-come-top.showed {
+//  transform: translateY($animation-y);
+//}
+//.animated-come-bottom.showed {
+//  transform: translateY(-$animation-y);
+//}

@@ -1,0 +1,45 @@
+{% extends './layout/layout.twig' %}
+
+{% block banner %}
+    <div class="l-section-title">
+        <h1>Les épreuves</h1>
+        <p class="l-p">Des épreuves de programmation vous attendent dans différents domaines tels que le développement web, d'application, et en rapport avec la sécurité</p>
+        <p class="l-sub-title l-space-top l-paragraph-divider">Êtes-vous prêt ?</p>
+    </div>
+{% endblock banner %}
+
+{% block content %}
+
+<section class="l-section l-section-light epreuve">
+    <div class="row">
+        <div class="l-section-title">
+            <h1 class="l-title sponsors-title paragraph-divider">Voici les épreuves</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="epreuve-wrapper">
+            <div class="epreuve-box l-box">
+                <h2 class="epreuve-name">Intelligence artificielle</h2>
+                <p class="epreuve-description">
+                    La première épreuve sera sur le domaine de l'IA. L'année dernière, les participants devaient développer une IA de jeu de plateau, chaque programme était confronté à un autre dans un tournoi. Puis une finale départageait les deux meilleurs programmes.</p>
+            </div>
+        </div>
+        <div class="epreuve-wrapper">
+            <div class="epreuve-box l-box">
+                <h2 class="epreuve-name">Développement web</h2>
+                <p class="epreuve-description">
+                    La deuxième épreuve abordera le thème du développement web, les participants auront à développer un site (HTML/CSS/PHP). En 2015, les participants avaient comme tâche le développement d'une interface utile à la gestion des départs/arrivés des bateaux au port du Havre. En 2014, ils devaient développer un site visant à gérer les dépenses entre amis lors de sorties/évenements et connaître les différents coûts.
+                </p>
+            </div>
+        </div>
+        <div class="epreuve-wrapper">
+            <div class="epreuve-box l-box">
+                <h2 class="epreuve-name">Sécurité informatique</h2>
+                <p class="epreuve-description">
+                    La troisième et dernière épreuve aura lieu le 20 mai, à 6 heures. Elle aura comme sujet principal la sécurité informatique, celle-ci visant à sensibiliser les étudiants aux différents problèmes de sécurité. L'année précédente, ils devaient résoudre des énigmes de cryptographie, ainsi qu'accéder à des ressources censées être protégées.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

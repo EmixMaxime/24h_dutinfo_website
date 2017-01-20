@@ -1,0 +1,27 @@
+@import "../libs/bower_components/foundation-sites/scss/foundation";
+
+.l-section-title {
+  font-size: 2rem;
+  text-align: center;
+
+  h1 {
+    font-size: 1em;
+  }
+  h2 {
+    font-size: 0.8em;
+  }
+}
+
+.l-section-title .l-sub-title {
+  font-size: 0.8em;
+}
+
+.l-section-title .l-p {
+  font-size: 0.6em;
+}
+
+@include breakpoint(medium) {
+  .l-section-title {
+    font-size: 2.5rem;
+  }
+}

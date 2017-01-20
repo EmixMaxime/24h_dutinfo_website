@@ -1,18 +1,22 @@
 // @import "main.scss";
 @import "../libs/bower_components/foundation-sites/scss/foundation";
 
-.inscription-section {
-  // @include grid-column(12);
+.inscription-info-list {
+  padding-left: 40px;
+  margin-top: 10px;
 }
 
-// @media print, screen and (min-width: medium) {
-//   .inscription-section {
-//     @include grid-column(6);
-//   }
-// }
+.inscription-info p {
+  margin-top: 15px;
+}
 
-@include breakpoint(medium) {
-    .inscription-section {
+.inscription-info-item {
+  list-style: initial;
+}
+
+.inscription-section {
+  @include grid-column(12);
+  @include breakpoint(medium) {
     @include grid-column(6);
   }
 }

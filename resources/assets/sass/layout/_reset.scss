@@ -14,6 +14,13 @@ ul {
   margin: 0;
 }
 
+.list-no-reset {
+  padding-left: 40px;
+  li {
+    list-style: initial;
+  }
+}
+
 p {
   margin: 0;
 }

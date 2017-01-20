@@ -1,0 +1,79 @@
+{% extends './layout/layout.twig' %}
+
+{% block banner %}
+    <div class="l-section-title">
+        <h1>Les participants</h1>
+        <p class="l-p">30 équipes issues de tous les IUT de France s'affronteront dans cette rude compétition</p>
+        <p class="l-sub-title l-space-top l-paragraph-divider">L'union fait la force !</p>
+    </div>
+{% endblock banner %}
+
+{% block content %}
+    <section class="l-section l-section-light participant">
+        <div class="row">
+            <div class="l-section-title">
+                <h1 class="l-title sponsors-title paragraph-divider">Voici quelques équipes</h1>
+            </div>
+            <div class="row">
+                <form class="participant-search" method="POST" action="#">
+                    <div class="field field-animated">
+                        <label for="email" class="field-label">Rechercher une équipe</label>
+                        <input type="email" name="email" id="email" class="field-input">
+                    </div>
+                </form>
+            </div>
+            <div class="participant-wrapper">
+                <div class="participant-box">
+                    <p class="participant-box-title">EmixTeam</p>
+                    <ul class="participant-box-list list-no-reset">
+                        <li class="participant-box-item">Un membre</li>
+                        <li class="participant-box-item">Un membre</li>
+                        <li class="participant-box-item">Un membre</li>
+                        <li class="participant-box-item">Un membre</li>
+                        <li class="participant-box-item">Un membre</li>
+                        <li class="participant-box-item">Un membre</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="participant-wrapper">
+                <div class="participant-box">
+                    <p class="participant-box-title">EmixTeam</p>
+                    <ul class="participant-box-list list-no-reset">
+                        <li class="participant-box-item">Un membre</li>
+                        <li class="participant-box-item">Un membre</li>
+                        <li class="participant-box-item">Un membre</li>
+                        <li class="participant-box-item">Un membre</li>
+                        <li class="participant-box-item">Un membre</li>
+                        <li class="participant-box-item">Un membre</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="participant-wrapper">
+                <div class="participant-box">
+                    <p class="participant-box-title">EmixTeam</p>
+                    <ul class="participant-box-list list-no-reset">
+                        <li class="participant-box-item">Un membre</li>
+                        <li class="participant-box-item">Un membre</li>
+                        <li class="participant-box-item">Un membre</li>
+                        <li class="participant-box-item">Un membre</li>
+                        <li class="participant-box-item">Un membre</li>
+                        <li class="participant-box-item">Un membre</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="participant-wrapper">
+                <div class="participant-box">
+                    <p class="participant-box-title">EmixTeam</p>
+                    <ul class="participant-box-list list-no-reset">
+                        <li class="participant-box-item">Un membre</li>
+                        <li class="participant-box-item">Un membre</li>
+                        <li class="participant-box-item">Un membre</li>
+                        <li class="participant-box-item">Un membre</li>
+                        <li class="participant-box-item">Un membre</li>
+                        <li class="participant-box-item">Un membre</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

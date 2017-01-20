@@ -2,44 +2,17 @@
 
 {% block banner %}
 
-<div class="row animated-come-top">
-  <section class="header-text">
-    <h1 class="strong-title header-title">Les 24h des dut informatique</h1>
-    <p class="header-description">Les 24h des IUT informatiques regroupe, chaque année, des étudiants de tout les IUT de France afin qu'ils concourent durant des epreuves testant leurs talents de programmeurs</p>
-    <p class="header-description l-space-top l-paragraph-divider">Soyez prêts</p>
-  </section>
+<div class="row">
+  <div class="banner-hero">
+    <div class="l-section-title">
+      <h1>Les 24h des DUT informatique</h1>
+      <p class="l-p">Les 24h des IUT informatiques regroupent, chaque année, des étudiants de tous les IUT de France afin qu'ils concourent durant des épreuves testant leurs talents de programmeurs</p>
+      <p class="l-sub-title l-space-top l-paragraph-divider" id="countdown-end--time">Soyez prêts</p>
+    </div>
+  </div>
 </div>
 
-<div class="countdown l-space-top row">
-  <div class="countdown-wrapper">
-    <div class="countdown-box" id="countdown-months">
-      <span class="countdown-box-time">1</span>
-      <span class="countdown-box-desc">mois</span>
-    </div>
-  </div>
-
-  <div class="countdown-wrapper">
-    <div class="countdown-box" id="countdown-days">
-      <span class="countdown-box-time">5</span>
-      <span class="countdown-box-desc">jours</span>
-    </div>
-  </div>
-
-  <div class="countdown-wrapper">
-    <div class="countdown-box" id="countdown-hours">
-      <span class="countdown-box-time">5</span>
-      <span class="countdown-box-desc">heures</span>
-    </div>
-  </div>
-
-  <div class="countdown-wrapper">
-    <div class="countdown-box" id="countdown-minutes">
-      <span class="countdown-box-time">25</span>
-      <span class="countdown-box-desc">minutes</span>
-    </div>
-  </div>
-
-</div>
+{% include './home/countdown.twig' %}
 
 
 {% endblock banner %}
@@ -47,8 +20,8 @@
 
 {% block content %}
   <section class="l-section l-section-light sponsors">
-    <div class="l-title">
-      <h1 class="strong-title sponsors-title paragraph-divider">Nos partenaires</h1>
+    <div class="l-section-title">
+      <h1 class="l-title sponsors-title paragraph-divider">Nos partenaires</h1>
     </div>
   </section>
 {% endblock content %}

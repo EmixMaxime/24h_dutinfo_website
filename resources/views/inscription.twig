@@ -1,23 +1,25 @@
 {% extends './layout/layout.twig' %}
 
 {% block banner %}
-  <section class="header-text">
-    <h1 class="header-title">Les 24h des dut informatique</h1>
-    <p class="header-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet a aliquid aut eum mollitia, molestias sit officiis quam, fugit iure nostrum fugiat suscipit assumenda id voluptas corporis. Sed, molestias, quo.</p>
-    <p class="header-description l-space-top l-paragraph-divider">C'est le temps de s'incrire!</p>
-  </section>
+  <div class="l-section-title">
+    <h1>Les 24h des DUT informatique</h1>
+    <p class="l-p">Si vous aimez la programmation, les défis et voulez vous mesurer à d'autres passionnés</p>
+    <p class="l-sub-title l-space-top l-paragraph-divider">Il est temps de s'inscrire</p>
+  </div>
+    {% include './home/countdown.twig' %}
 {% endblock banner %}
 
 {% block content %}
 
   {% import "./macro/form.twig" as form %}
-  {% import "./macro/title.twig" as title %}
 
   <div class="l-section l-section-light">
     <div class="row inscription-wrapper">
 
       <section class="inscription-section inscription-form">
-        {{ title.sectiontitle("Formulaire d'inscription") }}
+        <div class="l-section-title">
+          <h2 class="l-title l-paragraph-divider">Formulaire d'inscription</h2>
+        </div>
         <form action="#" method="POST" class="row">
 
           <div class="form-group-2 row">
@@ -36,11 +38,30 @@
             </select>
           </div>
 
+          <div class="field field-textarea">
+            <label class="field-label" for="message">Message</label>
+            <textarea class="field-input" for="message" id="message"></textarea>
+          </div>
+
+          <button class="l-btn l-btn--light l-back-animated-scale" type="submit" value="Envoyer">S'inscrire</button>
+
         </form>
       </section>
 
-      <section class="inscription-section inscription-informations">
-        {{ title.sectiontitle("Informations") }}
+      <section class="inscription-section inscription-info">
+        <div class="l-section-title">
+          <h2 class="l-title l-paragraph-divider">Modalités d'inscription</h2>
+        </div>
+        <p class="l-p">Votre demande d'inscription, puis votre inscription effective, vous seront confirmées chacune par email. </p>
+
+        <ul class="inscription-info-list">
+          <li class="inscription-info-item">Les frais d'inscription sont de 12 euros.</li>
+          <li class="inscription-info-item">Avoir sa carte étudiant</li>
+          <li class="inscription-info-item">30 équipes peuvent participer, mais seules deux équipes par IUT sont admises</li>
+
+        </ul>
+
+        
       </section>
     </div>
   </div>

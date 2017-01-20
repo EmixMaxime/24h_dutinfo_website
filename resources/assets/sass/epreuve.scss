@@ -1,0 +1,21 @@
+@import "../libs/bower_components/foundation-sites/scss/foundation";
+.epreuve-wrapper {
+  margin-top: 20px;
+  @include grid-column(12);
+  @include breakpoint(medium) {
+    @include grid-column-size(4);
+  }
+}
+
+.epreuve-name, .epreuve-time {
+  text-align: center;
+}
+
+.epreuve-time {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.epreuve-description {
+  text-align: justify;
+}
